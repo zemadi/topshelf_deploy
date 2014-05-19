@@ -1,8 +1,7 @@
-## Code for deployed Django app to Heroku
-
+<h2>How to deploy an already existing Django app to Heroku</h2>
 <p><a href="http://topshelf-kitchen.herokuapp.com/">Visit the live page here on Heroku </a>(NOTE: It's still in prototype mode)</p>
 <br>
-<h2>How to deploy an already existing Django app to Heroku</h2>
+
 <h3>Getting Started</h3>
 <p>These instructions assume that you are running Ubuntu/OS X. </p>
 <p><u>Windows users will <strong>NOT</strong> be able to push to Heroku.</u> You will need to setup a <a href="https://www.virtualbox.org/wiki/Downloads">virtual machine</a> that runs Linux, Ubuntu, or OS X. This was helpful with getting your [Ubuntu virtual machine started.](http://funinstall.blogspot.com/2013/07/ubuntu-django-and-heroku.html?m=1)</p>
