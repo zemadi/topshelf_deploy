@@ -1,6 +1,5 @@
 <h2>How to deploy an already existing Django app to Heroku</h2>
 <p><a href="http://topshelf-kitchen.herokuapp.com/">Visit the live page here on Heroku </a>(NOTE: It's still in prototype mode)</p>
-<br>
 
 <h3>Getting Started</h3>
 <p>These instructions assume that you are running Ubuntu/OS X. </p>
