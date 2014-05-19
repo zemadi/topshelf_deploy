@@ -37,7 +37,7 @@ Make sure you’re using the latest virtualenv release. If you’re using a vers
 <p><a href="http://stackoverflow.com/questions/18374878/gunicorn-on-heroku-binding-to-localhost">Here's how to change the default</a>, but it's best to avoid changing it.</p>
 <br>
 <br>
-<p><strong>What heroku totally forgot to address: your database. </strong>This was the biggest headache of all. If you're running Postgres, great. You'll have fewer problems. Make sure to sync and do schemamigrations before moving forward.</p>
+<p><strong>What heroku totally forgot to address: your database. </strong>This was the biggest headache of all. If you're running Postgres, great. You'll have fewer problems. Make sure to sync and do schemamigrations. Skip the rest of this section.</p>
 
 <p><strong>If you're running another database, you'll need to convert it to Postgres.</strong> There are three options:
 <ul>
