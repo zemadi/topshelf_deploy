@@ -5,7 +5,7 @@
 <p>These instructions assume that you are running Ubuntu/OS X. </p>
 <p><u>Windows users will <strong>NOT</strong> be able to push to Heroku.</u> You will need to setup a <a href="https://www.virtualbox.org/wiki/Downloads">virtual machine</a> that runs Linux, Ubuntu, or OS X. This was helpful with getting your [Ubuntu virtual machine started.](http://funinstall.blogspot.com/2013/07/ubuntu-django-and-heroku.html?m=1)</p>
 <br>
-<p>Ok, time to go through Heroku's instructions, with my notes. Some are in angry red.</p>
+<p>Ok, time to go through Heroku's instructions, with my notes. </p>
 <br>
 <p><blockquote style="font-size:16px"><strong>$ mkdir hellodjango && cd hellodjango </strong><br><br>
 Make sure you’re using the latest virtualenv release. If you’re using a version that comes with Ubuntu, you may need to add the --no-site-packages flag.</blockquote>
