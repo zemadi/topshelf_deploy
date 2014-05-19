@@ -88,7 +88,7 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )</strong><br></blockquote></p>
 
-<p style="color:red">NOPE. This didn't work. <br><br>Replace their database setting with: <strong>DATABASES = {'default':dj_database_url.config(default='postgres://localhost')}</strong><a href="http://stackoverflow.com/questions/11071579/heroku-database-settings-injection-how-do-i-setup-my-dev-django-database">  <br><br>Here's why.</a></p>
+<p style="color:red"><strong>NOPE. This didn't work.</strong> <br><br>Replace their database setting with: <strong>DATABASES = {'default':dj_database_url.config(default='postgres://localhost')}</strong><a href="http://stackoverflow.com/questions/11071579/heroku-database-settings-injection-how-do-i-setup-my-dev-django-database">  <br><br>Here's why.</a></p>
 
 <p>You need to do more to get this to work. You may already have some other settings. Get rid of any of the same settings taht Heroku wants to use (BASE_DIR, DATABASES, and ALLOWED HOSTS are loaded by default when you create a project). Get rid of your Postgres database settings completely!<br><br><strong style="color:red">Make sure to add Heroku's settings to the bottom of settings.py.</strong></p>
 <br>
