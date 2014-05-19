@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block indexOptions %}
+    <div id="signup" class="formStyle"></div>
+    <form method="post">
+        {#    Wraps each form item in a p tag. Or you can loop over every field in the form. Or add errors. #}
+        {% csrf_token  %}
+        Username: {{ form.username }}<br>
+        Password: {{ form.password }}<br>
+        Email: {{ form.email }}<br>
+
+        <input type="submit" class="submit" value="Sign Up" />
+
+    </form>
+    </div>
+{% endblock %}

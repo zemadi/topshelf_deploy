@@ -1,0 +1,24 @@
+<div class='container'>
+    <!--  <div class="recipeSearchForm"><form ng-submit="recipeSearchForm(queryParams, id)" >
+          <h4>What can I make with:
+              <select ng-model="queryParams.first" ng-options="item.ing_master.ing_test for item in pantry_list"></select> &
+              <select ng-model="queryParams.second" ng-options="item.ing_master.ing_test for item in pantry_list"></select> &
+              <select ng-model="queryParams.third" ng-options="item.ing_master.ing_test for item in pantry_list"></select> ? </h4>
+              <input type="submit" ng-click="loadData()" value="Redo search">
+      </form></div> -->
+    <div id="results">
+        <div ng-repeat="item in food | limitTo:feedLimit" ui-if="!!item.length">
+            <div class="results_list">
+                <div class="match_images">
+                    <h2 class="item_name">{{ item.recipeName }}</h2>
+                </div>
+                <div class="match_list">
+                    <p>From: {{ item.sourceDisplayName }}</p>
+                    <p>Rating: {{ item.rating }}/5, Cook time: {{ item.totalTimeInSeconds/60 }} min</p>
+                    <a href="http://www.yummly.com/recipe/{{ item.id }}" class="listLink">Find {{ item.recipeName }} at Yummly</a>
+                </div>
+            </div>
+        </div>
+        <h3 ng-click="feedLimit = feedLimit + 5" id="moarFood">I'm still hungry...show me more results!</h3>
+    </div>
+</div>

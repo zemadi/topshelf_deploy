@@ -1,0 +1,227 @@
+/*CSS for both Pantry and Recipe pages, since they share lots of data. Those pages are run on Angularjs. */
+
+body {
+    color: #411e0f;
+    background-color: #fafff3;
+    font-family: 'Fanwood Text', serif;
+    z-index: -1;
+}
+
+h3 {
+    font-family: 'Fanwood Text', serif;
+    font-size: 30px;
+}
+
+h4 {
+    font-family: 'Fanwood Text', serif;
+}
+
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+
+p {
+    font-size: 20px;
+}
+
+header {
+    max-height: 60px;
+}
+
+#headerContent {
+    position: absolute;
+    max-height: 60px;
+    width: 100%;
+    background-color: #fafff3;
+    top: 0px;
+    display: block;
+    font-family: 'Fanwood Text', serif;
+    font-size: 20px;
+
+}
+
+.topshelf {
+    font-family: 'Oleo Script', Garamond,serif;
+    font-weight: 500;
+    color: #9e0a3a;
+    display: inline-block;
+    margin-left: 20px;
+}
+
+#login_logout {
+    display: inline-block;
+    padding: 10px;
+}
+
+
+input, select {
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+.form-control {
+    margin-top: 40px;
+}
+
+.submit {
+    color: beige;
+    border-radius: 5px;
+    background-color: #217C7E;
+    margin-top: 15px;
+    margin-right: 10px;
+    font-family: 'Fanwood Text', serif;
+    font-size: 16px;
+
+}
+
+.recipeSearchForm {
+    text-align: center;
+    display: block;
+    padding-top: 30px;
+}
+
+
+#pantryForm {
+    float:left;
+    width:30%;
+    text-align: center;
+    height: 100%;
+    padding-bottom: 300px;
+    padding-left: 30px;
+}
+
+/*Sets titles in forms.*/
+.title {
+    text-align: center;
+    font-family: 'Oleo Script', Garamond,serif;
+    color: #9e0a3a;
+}
+
+/*For the div that shows matching recipes. This is formatting for the header. */
+#match_header{
+    height: 100px;
+}
+
+/*Containers for the user's list of pantry items*/
+.userPantryList {
+    float:left;
+    max-width: 65%;
+    display: table;
+    text-align: center;
+    cursor: pointer; cursor: hand;
+}
+
+/*Individual div's that act as buttons for the user's ingredients list. */
+.foodButtons {
+    /*float: right;*/
+    width: auto;
+    margin-right: 100px;
+    display: table-cell;
+    padding: 10px;
+    text-transform: capitalize;
+    border-radius: 2px;
+    align-content: center;
+    font-size: 18px;
+    font-family: 'Fanwood Text', serif;
+}
+
+/*Hover detail for food list.*/
+.foodButtons:hover{
+    text-decoration: line-through;
+    color: #9e0a3a;
+}
+
+/*Formatting for results display container.*/
+#results {
+    margin-top: 60px;
+    z-index: -1;
+}
+
+/*Formatting for results display list. */
+.results_list {
+    width: 100%;
+    display: block;
+}
+
+/*For header in results list. */
+.item_name {
+    font-family: 'Oleo Script', Garamond,serif;
+    display: inline-block;
+    border-left: 100px;
+    text-shadow: #ffffff 1px 1px, #ffffff 2px 2px, #ffffff 3px 3px;
+    background-color: #27a1a3;
+    padding: 10px;
+    text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    margin-left: 150px;
+}
+
+/*For actual results display, which is right under the header. */
+.match_list {
+    text-align: center;
+    width: 80%;
+    border-radius: 5px;
+    border-left: 100px;
+    background-color: beige;
+    border-top: 1px double solid #217C7E;
+    border-bottom: 1px double solid #217C7E;
+    margin: 0px 0px 20px 150px;
+    padding: 10px;
+
+}
+
+/*Sets links in recipe list.*/
+.listLink {
+    font-size: 20px;
+    color: #9e0a3a;
+    text-decoration: none;
+}
+
+/*Formatting for more results link. */
+#moarFood {
+    color: #9e0a3a;
+    font-family: 'Oleo Script', Garamond,serif;
+    font-size:25px;
+    padding:8px 26px;
+    text-decoration:none;
+    position: absolute;
+    z-index: -1;
+    margin-bottom: 80px;
+    cursor: pointer; cursor: hand;
+}
+
+/*Wrapper for footer-- an attempt to get things to anchor properly. */
+#wrapper {
+    background-color: #fafff3;
+    z-index: 3;
+    bottom: 0px;
+}
+/*Footer formatting. It doesn't fill all of the bottom, which makes scrolling text slightly visible under the footer. */
+Footer {
+    background-color: #fafff3;
+    color: #411e0f;
+    height: 40px;
+    width: 100%;
+    bottom: 0px;
+    display: block;
+    text-align: center;
+    position: fixed;
+    font-family: 'Oleo Script', Garamond,serif;
+    margin-bottom: 20px;
+    z-index: 5;
+}
+
+/*Some responsiveness on page. */
+@media (max-width: 767px) {
+    Footer {
+        margin-left: -20px;
+        margin-right: -20px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+}

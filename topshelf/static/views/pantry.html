@@ -1,0 +1,21 @@
+<div class='container-fluid'>
+    <div class="recipeSearchForm"><form ng-submit="recipeSearchForm(queryParams, id)" >
+        <h4>What can I make with:
+            <select ng-model="queryParams.first" ng-options="item.ing_master.ing_test for item in pantry_data" ></select> &
+            <select ng-model="queryParams.second" ng-options="item.ing_master.ing_test for item in pantry_data"></select> &
+            <select ng-model="queryParams.third" ng-options="item.ing_master.ing_test for item in pantry_data"></select> ? </h4>
+        <a href="#/{{ id }}/recipe/"><input type="submit" class="submit" value="Start recipe search"></a>
+    </form></div>
+    <div id="columnContainer">
+        <div id="pantryForm"><form ng-submit="submitForm()">
+            <h2 class="title">Stock Up Your Pantry</h2>
+            <input type="text" ng-model="pantry.ing_master" typeahead="item.resource_uri as item.ing_test for item in list_items | filter:$viewValue | limitTo:30" class="form-control">
+            <br>
+            <input type="submit" value="Add Ingredient" ng-click="loadData()" class="submit">
+        </form></div>
+        <h2 class="title">Your Inventory:</h2>
+        <div ng-repeat="item in pantry_data" class="userPantryList">
+            <div ng-click="deleteItem(item)" class="foodButtons">{{ item.ing_master.ing_test }}</div>
+        </div>
+    </div>
+</div>

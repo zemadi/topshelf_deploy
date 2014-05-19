@@ -1,0 +1,15 @@
+{% extends "index.html" %}
+{% load staticfiles %}
+
+{% block indexOptions %}
+    <div id="login" class="formStyle">
+        <form method="post">
+            {% csrf_token  %}
+            Username: {{ form.username }}<br>
+            Password: {{ form.password }}
+            <input type="submit" class="submit" value="Sign In" />
+
+        </form>
+    </div>
+
+{% endblock %}

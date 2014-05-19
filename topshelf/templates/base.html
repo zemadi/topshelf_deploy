@@ -1,0 +1,59 @@
+{% load staticfiles %}
+{% load i18n %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}TopShelf{% endblock %}</title>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Fanwood+Text' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Oleo+Script" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/base.css' %}" rel='stylesheet'>
+
+    <script type="text/javascript"  src="{% static 'js/vendor/jquery-1.11.0.min.js' %}"></script>
+    <script type="text/javascript"  src="{% static 'js/vendor/angular.js' %}"></script>
+    <script type="text/javascript"  src="{% static 'js/vendor/angular-route.js' %}"></script>
+
+    <script src="{% static 'js/bootstrap/ui-bootstrap-tpls-0.10.0.js' %}" ></script>
+    <script type="text/javascript" src="{% static 'js/app.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/controllers/pantry.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/controllers/recipe.js' %}"></script>
+
+</head>
+
+<body>
+<header id="header">
+    <div id="headerContent">
+        {% block header %}
+            <a href="{% url 'index' %}"><h1 class="topshelf">TopShelf</h1></a>
+            <div id="login_logout"></div>
+            {% if user.is_authenticated %}
+                {% trans "Logged in" %}: {{ user.username }}
+                (<a href="{% url 'auth_logout' %}">{% trans "Log out" %}</a> |
+                <a href="{% url 'auth_password_change' %}">{% trans "Change password" %}</a>)
+            {% else %}
+                <a href="{% url 'auth_login' %}">{% trans "Log in" %}</a>
+            {% endif %}
+            <hr />
+        {% endblock %}
+    </div>
+    <hr class="lines"><hr class="lines">
+</header>
+<!--  Add social share buttons later -->
+<div role="main">
+    <div ng-app="app">
+        <div ng-view>
+        </div>
+    </div>
+</div>
+
+<div id="wrapper">
+    <footer>
+        <h3 class="footer">Say hi to us at <a href="">nom@topshelf.com</a></h3>
+        <!--        <p class="muted credit">Example courtesy <a href="http://martinbean.co.uk">Martin Bean</a> and <a href="http://ryanfait.com/sticky-footer/">Ryan Fait</a>.</p> -->
+    </footer>
+</div>
+</body>
+
+</html>
