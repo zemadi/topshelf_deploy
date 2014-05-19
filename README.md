@@ -3,7 +3,7 @@
 
 <h3>Getting Started</h3>
 <p>These instructions assume that you are running Ubuntu/OS X. </p>
-<p><u>Windows users will <strong>NOT</strong> be able to push to Heroku.</u> You will need to setup a <a href="https://www.virtualbox.org/wiki/Downloads">virtual machine</a> that runs Linux, Ubuntu, or OS X. This was helpful with getting your [Ubuntu virtual machine started.](http://funinstall.blogspot.com/2013/07/ubuntu-django-and-heroku.html?m=1)</p>
+<p><u>Windows users will <strong>NOT</strong> be able to push to Heroku.</u> You will need to setup a <a href="https://www.virtualbox.org/wiki/Downloads">virtual machine</a> that runs Linux, Ubuntu, or OS X. This was helpful with getting an <a href="http://funinstall.blogspot.com/2013/07/ubuntu-django-and-heroku.html?m=1">Ubuntu virtual machine started.(</a></p>
 <br>
 <p>Ok, time to go through Heroku's instructions, with my notes. </p>
 <br>
