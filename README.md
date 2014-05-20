@@ -13,9 +13,9 @@ Make sure you’re using the latest virtualenv release. If you’re using a vers
 <br><br><br>
 <blockquote style="font-size:16px"><strong>$ virtualenv venv </strong><br></blockquote></p>
 <p style="color:red">UBUNTU USERS, DO THIS INSTEAD: **$ virtualenv venv --no-site-packages**</p>
-<p>Heroku didn't explain the reason for it. It's important! It stops your desktop's applications from loading up in your virtualenv. </p>
+<p>Heroku didn't explain the reason for it. It's important! It stops your machine's applications from loading up in your virtualenv. </p>
 
-<p style="color:red"> It will keep your requirements.txt file clean. Heroku will try to load everything that goes into requirements.txt and will throw errors because it's loading things that are Ubuntu-only. 
+<p style="color:red"> It will keep your requirements.txt file clean. Heroku will try to load everything that goes into requirements.txt and will throw errors because it's loading things that are only for your machine. 
 </p> 
 <br>
 <p><blockquote style="font-size:16px"><strong>$ source venv/bin/activate</strong><br></blockquote></p>
