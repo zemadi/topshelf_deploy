@@ -120,6 +120,19 @@ $ git push heroku master <br>
 
 <p>You can also run shell commands in Heroku with <strong>heroku run python manage.py shell</strong>, which may be helpful for synching and loading data.</p>
 
+<p>Additional notes: I started using django-hstore to be able to store key-value pairs in the database. I had to make a few modifications to heroku:
+
+<p>
+<strong>heroku pg:psql</strong>
+Once in Heroku Postgres:
+<strong>CREATE EXTENSION hstore;
+\q</strong>
+<p>After leaving heroku postgres:
+<strong>
+heroku run python manage.py syncdb
+heroku run python manage.py migrate {yourapp}
+</strong>
+</p>
 <h3>Good luck!!</h3>
 
 
