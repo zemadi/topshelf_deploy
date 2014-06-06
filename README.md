@@ -124,13 +124,13 @@ $ git push heroku master <br>
 
 <p>
 <strong>heroku pg:psql</strong>
-Once in Heroku Postgres:
+Once in Heroku Postgres:<br>
 <strong>CREATE EXTENSION hstore;
-\q</strong>
-<p>After leaving heroku postgres:
+\q</strong><br>
+<p>After leaving heroku postgres:<br>
 <strong>
-heroku run python manage.py syncdb
-heroku run python manage.py migrate {yourapp}
+heroku run python manage.py syncdb<br>
+heroku run python manage.py migrate {yourapp}<br>
 </strong>
 </p>
 <h3>Good luck!!</h3>
