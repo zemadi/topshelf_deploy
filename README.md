@@ -131,6 +131,8 @@ Once in Heroku Postgres:<br>
 <strong>
 heroku run python manage.py syncdb<br>
 heroku run python manage.py migrate {yourapp}<br>
+IF NEEDED: heroku run manage.py loaddata {data].json}<br>
+IF NEEDED: heroku run managep.y migrate tastypie (don't migrate this before loading your data. It'll generate errors)
 </strong>
 </p>
 <h3>Good luck!!</h3>
